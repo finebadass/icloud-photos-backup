@@ -1,0 +1,26 @@
+name: tests
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test-suite (fake icloudpd, no network)
+        run: bash tests/run.sh
+      - name: Again with the Python 3.9 that ships with macOS
+        if: runner.os == 'macOS'
+        run: PYTHON=/usr/bin/python3 bash tests/run.sh
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: shellcheck
+        run: shellcheck -x -S warning skills/icloud-photos-backup/scripts/*.sh tests/run.sh
+      - name: python compiles
+        run: python3 -m py_compile skills/icloud-photos-backup/scripts/ipb.py tests/fake_icloudpd.py
