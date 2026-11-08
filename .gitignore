@@ -1,0 +1,12 @@
+# Never commit sign-in sessions, logs or personal settings (they live outside the repo anyway).
+*.session
+cookies/
+logs/
+config
+config.bak
+.icloud-photos-backup-id
+_manifest/
+*.part
+__pycache__/
+*.pyc
+.DS_Store

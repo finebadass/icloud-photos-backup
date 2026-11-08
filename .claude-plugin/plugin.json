@@ -1,0 +1,13 @@
+{
+  "name": "icloud-photos-backup",
+  "version": "0.1.0",
+  "description": "Back up your whole iCloud Photos library (originals + Live Photo videos) to an external drive and prove nothing is missing. Built on icloudpd; never deletes anything in iCloud, never handles your password.",
+  "author": {
+    "name": "Giovanni Mulè",
+    "url": "https://github.com/finebadass"
+  },
+  "homepage": "https://github.com/finebadass/icloud-photos-backup",
+  "repository": "https://github.com/finebadass/icloud-photos-backup",
+  "license": "MIT",
+  "keywords": ["icloud", "photos", "backup", "icloudpd", "iphone", "live-photos", "archive"]
+}

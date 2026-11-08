@@ -1,0 +1,19 @@
+{
+  "name": "icloud-photos-backup",
+  "owner": {
+    "name": "Giovanni Mulè",
+    "url": "https://github.com/finebadass"
+  },
+  "metadata": {
+    "description": "A Claude Code skill that backs up your whole iCloud Photos library to an external drive and proves nothing is missing.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "icloud-photos-backup",
+      "source": "./",
+      "description": "Back up your whole iCloud Photos library to an external drive and prove nothing is missing.",
+      "version": "0.1.0"
+    }
+  ]
+}
